@@ -1,0 +1,26 @@
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
+    <div *ngFor="let i of [1]">
+        <mat-card>
+            <mat-calendar [selected]="selectedDate" (selectedChange)="onSelect($event)"></mat-calendar>
+        </mat-card>
+    </div>
+</div>
+<div class='scheduledList'>
+    <table style="margin: 0 auto;">
+        <tr>
+            <th>Schedule Date</th>
+            <th>Event Name</th>
+            <th>Change Schedule</th>
+        </tr>
+        <tbody *ngFor="let ele of scheduledList; index as i">
+            <tr>
+                <td>{{ele.scheduleTime | date}}</td>
+                <td>{{ele.eventName}}</td>
+                <td><p style='color:green; cursor: pointer;text-align: center; font-weight: bold' *ngIf="ele.scheduleTime">
+                    <span class="edit_btn" (click)="onSelect(scheduledList[i])"><u>Edit</u></span>
+                    <span class="delete_btn" style="margin-left: 10px" (click)="onDelete(scheduledList[i])">
+                        <u>Delete</u></span></p></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

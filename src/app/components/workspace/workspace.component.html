@@ -1,0 +1,49 @@
+<div class="job container-fluid">
+    <h1>Job Notification</h1>
+
+<form [formGroup]="jobnotifyForm" (ngSubmit)="onFormSubmit()" style="
+height: 859px;">
+  <label for="fname">Company Name:</label>
+ ABC <br><br>
+  <label for="lname">Role Posting for:</label>
+  Frontend Developer<br><br> 
+  <label for="fname">About Company:</label>
+  <textarea id="w3review" formControlName="aboutcompany" rows="4" cols="50">
+     </textarea>
+  <br><br> 
+  <label for="fname">Job Description:</label>
+  <textarea id="w3review" formControlName="description" rows="4" cols="50"> </textarea> <br><br>
+  <label  for="fname">Key Skills Required:</label>
+  <input style="    margin-left: 34px;" type="text" id="fname" formControlName="skills"><br><br>
+
+ 
+  <label  for="fname">Relavent Experience:</label>
+  <input type="text" id="fname" formControlName="experience"><br><br>
+  <label for="fname">Notice Period:</label>
+  <input  type="text" id="fname" formControlName="notice"><br><br>
+  <label for="fname">Serving Notice:</label>
+  <input  type="text" id="fname" formControlName="serving"><br><br>
+  <label for="fname">Current CTC:</label>
+  <input  type="text" id="fname" formControlName="currentctc"><br><br>
+  <label for="fname">Expected CTC:</label>
+  <input  type="text" id="fname" formControlName="expectedctc"><br><br>
+
+<div > <label for="fname">Company helpline No:</label>
+    <span>99999999999</span> </div>
+
+<div><label for="fname">Company Email:</label>
+    <span >anc@gmail.com</span></div>
+    <div>
+        <button class="button button1" [disabled]="!jobnotifyForm.valid" (onClick)="onFormSubmit">Apply</button>
+    </div>
+ 
+</form>
+
+</div>
+
+<div class="json">
+<h1>Json value</h1>
+<div class="view">
+    {{jobnotifyForm.value | json}}
+</div>
+</div>

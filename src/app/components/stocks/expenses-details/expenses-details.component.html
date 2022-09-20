@@ -1,0 +1,68 @@
+<table style="background-color: white;">
+    <div>
+        <p>Expenses List </p>
+        <button class="button" mat-raised-button color="Secondary" (click)="add()">Add</button>  
+    </div>
+    <span class="spacer"></span>
+    <tr>
+        <th>Item</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Location</th>
+        <th>Spent On</th>
+        <th>Status</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <mat-divider></mat-divider>
+    <tr *ngFor="let entry of expenseEntries; index as i">
+        <td scope="row">{{ entry.item }}</td>
+        <td>{{ entry.amount }}</td>
+        <td>{{ entry.category }}</td>
+        <td>{{ entry.description }}</td>
+        <td>{{ entry.spendOn  }}</td>
+        <td>{{ entry.status }}</td>
+        <td>
+            <button mat-button color="primary" (click)="editExpenses(i)">Edit</button></td>
+          <td>  <button mat-button color="warn" (click)="deleteExpenses(entry.id )">Delete</button>
+        </td>
+    </tr>
+ 
+</table>
+
+        
+<div *ngIf="edit">
+    <mat-card>
+        <h1 style="text-align: center;background: #800080;color:#fff;padding: 15px;"> Edit leave Details</h1>
+    <form [formGroup]="formData">
+        
+    <mat-form-field>
+        <label for="empName">Item</label> 
+        <input  formControlName="item" >
+       </mat-form-field>
+           <mat-form-field>
+            <label for="empCode">Amount</label> 
+            <input type="text" formControlName="amount" >
+           </mat-form-field>
+           <mat-form-field>
+            <label for="empCardNo">Category</label> 
+            <input  type="text" formControlName="category" >
+           </mat-form-field>
+            <mat-form-field>
+                <label for="Dept">Location</label> 
+                <input type="text"  formControlName="description">
+            </mat-form-field>
+            <mat-form-field>
+                <label for="fromDate">Spent On</label> 
+              <input type="text"  formControlName="spendOn" placeholder="From Date">
+            </mat-form-field>
+           
+         
+     
+    </form>
+    <div style="text-align: center">
+    <button class="button" mat-raised-button color="primary" style="margin-right: 20px;" (click)="editExp()">Done</button> 
+    <button class="button" mat-raised-button color="Secondary" (click)="Cancel()">Cancel</button>  
+</div>
+    </mat-card>
+    </div>

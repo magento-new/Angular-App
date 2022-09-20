@@ -1,0 +1,52 @@
+mat-drawer {
+    background-color: darkgray;
+}
+.mat-nav-list .mat-list-item {
+    color:#fff;
+}
+mat-nav-list {
+    .nav-item {
+        margin-top: 5%;
+        color: white;
+
+    }
+
+    mat-expansion-panel {
+        background: #2d2d2d;
+        margin-left: -4%;
+        padding: 2%;
+    }
+}
+
+// .nav-item {
+//     margin-bottom: 15%;
+//     mat-expansion-panel {
+//         margin-left: -2%;
+//         mat-expansion-panel-header {
+//             margin-bottom: 5%;
+//         }
+//     }
+// }
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+mat-drawer-content {
+    background-color: #1d1d2c
+}
+
+mat-toolbar {
+    background-color: #1d1d2c;
+    color: white;
+    // padding: 1%;
+}
+
+mat-divider {
+    background-color: white;
+}
+
+img {
+    height: 40px;
+}
+

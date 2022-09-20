@@ -1,0 +1,44 @@
+
+<div class="row" style="argin-top: 68px;">
+<h1>Payslip</h1>
+</div>   
+          <form  class="container">
+            
+            <label for="country" style="font-size:16px">Pay period</label>
+            <select id="country" name="country" >
+              <option value="australia">jan 2021</option>
+              <option value="canada">feb 2021</option>
+              <option value="usa">march 2021</option>
+              <option value="australia">april 2021</option>
+              <option value="canada">may 2021</option>
+              <option value="usa">june 2021</option>
+              <option value="australia">july 2021</option>
+              <option value="canada">aug 2021</option>
+              <option value="usa">sep 2021</option>
+              <option value="australia">oct 2021</option>
+              <option value="canada">nov 2021</option>
+              <option value="usa">dec 2021</option>
+            </select>
+            <div><button class="button" (click)="addchange()">View Payslip</button>
+                <button class="button" (click)="addchange()" >View pft</button></div>
+          </form>
+              
+       
+<div style="color:black"  class="container" *ngIf="addemployee" >
+    
+  <div *ngFor="let data of paySlipData">
+    <p >Name:Asfinao M</p>
+    <p>Emp No.B139999</p>
+    <p>Payment Mode Bank TransferBank Name:  {{data.bank}} Account No.{{data.bankaccno}}</p>
+   <p> Date of Joining  {{data.dob}} DesignationAssociate - {{data.designation}} {{data.location}}</p>
+   <p>Department  {{data.department}}</p>
+   <p> PAN No.BCSDRRGGHH 0</p>
+    <p>PF Number {{data.pfno}}</p>
+    <p>Days Paid {{data.stddays}} Arrear Days0LWP0</p>
+    <p>Basic pay {{data.basic}}</p>
+    <p>Gross pay {{data.grossearn}}</p>
+    <p>IncomeTax  {{data.incometax}}</p>
+    <p>Total Ducdution  {{data.grossdeduction}}</p>
+    <p>Net pay  {{data.netpay}}</p>
+    </div>
+</div>

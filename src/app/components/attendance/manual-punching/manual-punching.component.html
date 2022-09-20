@@ -1,0 +1,112 @@
+<div class="manual_punching_outer">
+    <h2>Attendance</h2>
+    <div class="container">
+
+
+        <div class="attendance_choose_date">
+            <mat-label class="attendance_lable">Choose a date</mat-label>
+            <mat-form-field appearance="fill" class="form">
+                <mat-label>From</mat-label>
+                <input matInput [matDatepicker]="fromDate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+                <mat-datepicker #fromDate></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form">
+
+                <mat-label>To</mat-label>
+                <input matInput [matDatepicker]="toDate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+                <mat-datepicker #toDate></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="attendance_table_outer"> <br />
+            <table>
+                <thead>
+                    <tr>
+                        <th class="name-col">Employee Name</th>
+
+                        <th *ngFor="let day of daysArray">{{day}} </th>
+
+                        <th class="missed-col">Days Missed-office</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <span *ngIf="empType=='admin'">
+                        <tr *ngFor="let emp of empArray" class="employee">
+                            <td class="name-col">{{emp.name}}</td>
+
+                            <td id="" *ngFor="let day of daysArray" class="attend-col">
+                                <input type="checkbox" id="{{emp.firstName}}"
+                                    (change)="onChange(day, $any($event.target)?.checked)"><br>
+                            </td>
+
+                            <td class="missed-col" id="selectedDays"> <input type="text"
+                                    placeholder="Enter Total no. of leave days"></td>
+
+                        </tr>
+                    </span>
+                    <tr *ngIf="empType=='employee'" class="employee">
+                        <td class="name-col">{{empName}}</td>
+
+                        <td id="" *ngFor="let day of daysArray" class="attend-col">
+                            <input type="checkbox" id="{{empName}}"
+                                (change)="onChange(day, $any($event.target)?.checked)"><br>
+                        </td>
+
+                        <td class="missed-col" id="selectedDays"> <input type="text"
+                                placeholder="Enter Total no. of leave days"></td>
+
+                    </tr>
+
+                </tbody>
+                <button class="button" mat-raised-button color="primary" (click)="Submit()">SUBMIT</button>
+
+
+            </table>
+        </div>
+        <div>
+
+
+
+
+            <!-- <table>
+    <tr>
+        <th>EmpId</th>
+        <th>Emp Name</th>
+        <th>EmpCode</th>
+        <th>Emp CardNo</th>
+        <th>Date</th>
+        <th>Intime</th>
+        <th>Actions</th>
+    </tr>
+    <mat-divider></mat-divider>
+    <tr>
+        <td>1</td>
+        <td>Nyan</td>
+        <td>Female</td>
+        <td>tables@mail.com</td>
+        <td>9876541230</td>
+        <td>2022-25-12</td>
+        <td>
+            <button mat-stroked-button color="primary">Edit</button> &nbsp;
+            <button mat-stroked-button color="warn">Delete</button>
+        </td>
+    </tr>
+    <tr *ngFor="let ele of myresult">
+        <td>{{ele.id}}</td>
+        <td>{{ele.name}}</td>
+        <td>{{ele.options}}</td>
+        <td>{{ele.email}}</td>
+        <td>{{ele.mobile}}</td>
+        <td>{{ele.joinDate}}</td>
+        <td>
+            <button mat-stroked-button color="primary">Edit</button> &nbsp;
+            <button mat-stroked-button color="warn">Delete</button>
+        </td>
+    </tr>
+</table> -->
+
+        </div>

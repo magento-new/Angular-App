@@ -1,0 +1,30 @@
+<div class="container" style="margin-top: 100px;">
+    <div class="login-content">
+        <div class="form_wrapper">
+            <form [formGroup]="userForm" action="">
+                <h2 class="login-toolbar" color="primary">Sign In</h2>
+                <div class="input_field">
+                    <input type="text" formControlName="username" placeholder="Username">
+                </div>
+                <div class="input_field">
+                    <input type="text" matInput formControlName="password" placeholder="Password">
+                </div>
+                <mat-radio-group formControlName="userType">
+                    <mat-radio-button value="admin">Admin</mat-radio-button> &nbsp;
+                    <mat-radio-button value="employee">Employee</mat-radio-button>
+                </mat-radio-group>
+                <div class="btnSubmit">
+                    <button [disabled]="userForm.invalid" type="submit" (click)="login()" mat-raised-button
+                        color="primary">Log in</button>
+                </div>
+                <div class="form_bottom_div">
+                    <a href="#" mat-list-item style="cursor: pointer; text-decoration: underline;">Forget password?</a>
+                    <a mat-list-item style="cursor: pointer; text-decoration: underline;" routerLink="/registration"
+                        routerLinkActive="active">Sign Up</a>
+                    <a mat-list-item style="cursor: pointer; text-decoration: underline;" routerLink="/registration">Guest
+                        user</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

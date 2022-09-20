@@ -1,0 +1,41 @@
+.container{
+    // background-color:rgb(214, 249, 249);
+    width: 40%;
+    margin: auto;
+    margin-top: 5%;
+    table{
+        color: white;
+        width: 80%;
+        margin: auto;
+        thead{
+            background-color: rgb(76, 74, 74);
+            width: 70%;
+        }
+    }
+}
+.form{
+    background-color:rgb(214, 249, 249);
+    width: 40%;
+    margin: auto;
+    margin-top: 10%;
+    .section{
+        margin: 5%;
+    }
+}
+
+h2{
+   text-align: center;
+}
+.form{
+    padding: 5%;
+    width: 90%;
+    select{
+        width: 60%;
+    }
+}
+.actions{
+    text-align: right;
+    button{
+        margin: 1%;
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "data":[
+    {
+      "image": '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',
+      "id": 'IM2805UE',
+      name: 'Jennifer',
+      checkin: '8:30 AM',
+      break: '1:30 PM',
+      checkout: '4:30 PM',
+      total: '8:00',
+      status: 'Present',
+      shift: 'Day Shift',
+      worktype: 'Office',
+      ip: ' ',
+      latitude: '44.968046',
+      longitude: ' -94.420307',
+      attendanceRatio: [70, 20, 10],
+      empAttendance: [
+        {
+          date: '12-05-2022',
+          checkin: '9:00 AM',
+          break: '1:15 PM',
+          checkout: '5:30 PM',
+          workinghours: '8:30',
+          status: 'Present',
+          shift: 'Day Shift'
+        },
+        {
+          date: '13-05-2022',
+          checkin: '-',
+          break: '-',
+          checkout: '-',
+          workinghours: '-',
+          status: 'Absent',
+          shift: 'Day Shift'
+        },
+        {
+          date: '14-05-2022',
+          checkin: '-',
+          break: '-',
+          checkout: '-',
+          workinghours: '-',
+          status: 'Weekend',
+          shift: '-'
+        },
+        {
+          date: '15-05-2022',
+          checkin: '-',
+          break: '-',
+          checkout: '-',
+          workinghours: '-',
+          status: 'Weekend',
+          shift: '-'
+        },
+        {
+          date: '16-05-2022',
+          checkin: '8:50 PM',
+          break: '1:30 AM',
+          checkout: '5:05 AM',
+          workinghours: '8:15',
+          status: 'Present',
+          shift: 'Night Shift'
+        },
+        {
+          date: '17-05-2022',
+          checkin: '9:00 PM',
+          break: '1:00 AM',
+          checkout: '4:50 AM',
+          workinghours: '7:50',
+          status: 'Present',
+          shift: 'Night Shift'
+        },
+        {
+          date: '18-05-2022',
+          checkin: '8:56 PM',
+          break: '1:08 AM',
+          checkout: '5:24 AM',
+          workinghours: '8:26',
+          status: 'Present',
+          shift: 'Night Shift'
+        },
+        {
+          date: '19-05-2022',
+          checkin: '9:25 AM',
+          break: '1:30 PM',
+          checkout: '5:45 PM',
+          workinghours: '8:20',
+          status: 'Present',
+          shift: 'Day Shift'
+        },
+        {
+          date: '20-05-2022',
+          checkin: '8:30 AM',
+          break: '1:30 PM',
+          checkout: '4:30 PM',
+          workinghours: '8:00',
+          status: 'Present',
+          shift: 'Day Shift'
+        }
+      ]
+    }
+  ]
+}
+  

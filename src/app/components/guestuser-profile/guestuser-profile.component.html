@@ -1,0 +1,86 @@
+<mat-card class="card profile_details_outer">
+    <mat-card-content>
+        <h2 center>Profile Details</h2>
+        <form [formGroup]="profileForm">
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input type="text" matInput formControlName="name" placeholder="Name">
+                    </mat-form-field>
+                    <mat-radio-group formControlName="gender">
+                        <mat-radio-button value="male">Male</mat-radio-button> &nbsp;
+                        <mat-radio-button value="female">Female</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input type="email" matInput formControlName="email" placeholder="Email">
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <input type="text" matInput formControlName="Phone" placeholder="Phone">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input type="text" matInput formControlName="department" placeholder="Department">
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <input type="text" matInput formControlName="designation" placeholder="Designation">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input type="text" matInput formControlName="address" placeholder="Address">
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <input type="text" matInput formControlName="currentcompany" placeholder="Current Company">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input type="text" matInput formControlName="CurrentCTC" placeholder="Current CTC">
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <input type="text" matInput formControlName="expectedCTC" placeholder="expected CTC">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input type="text" matInput formControlName="totalexperience" placeholder="Total experience">
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <input type="text" matInput formControlName="releventexperience" placeholder="Relevent experience">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input type="text" matInput formControlName="notice" placeholder="Notice Period">
+                    </mat-form-field>
+                    
+               
+            </div>
+        </div>
+            <div>
+                <mat-label>Upload Resume</mat-label><br><br>
+                <input mat-raised-input type="file" formControlName="resume">
+            </div>
+        </form>
+        <div>
+            <button class="button" mat-raised-button color="primary" (click)="onSubmit()">SUBMIT</button>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+

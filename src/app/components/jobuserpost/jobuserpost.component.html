@@ -1,0 +1,59 @@
+<div class="job_user_post_outer">
+    <div class="container">
+        <h1> User Job Post Details</h1>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <ng-container matColumnDef="Name">
+              <th mat-header-cell *matHeaderCellDef>Name</th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="Gender">
+              <th mat-header-cell *matHeaderCellDef> Gender </th>
+              <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Department">
+                <th mat-header-cell *matHeaderCellDef> Department </th>
+                <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+              </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="experience">
+              <th mat-header-cell *matHeaderCellDef> Experience </th>
+              <td mat-cell *matCellDef="let element"> {{element.totalexperience}} </td>
+            </ng-container>
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef> Email </th>
+              <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="notice">
+              <th mat-header-cell *matHeaderCellDef> Notice Period </th>
+              <td mat-cell *matCellDef="let element"> {{element.notice}} </td>
+            </ng-container>
+
+              <ng-container matColumnDef="Phone">
+                <th mat-header-cell *matHeaderCellDef> Phone Number</th>
+                <td mat-cell *matCellDef="let element"> {{element.Phone}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="currentctc">
+                <th mat-header-cell *matHeaderCellDef> Current CTC</th>
+                <td mat-cell *matCellDef="let element"> {{element.CurrentCTC}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="expectedctc">
+                <th mat-header-cell *matHeaderCellDef> Expected CTC</th>
+                <td mat-cell *matCellDef="let element"> {{element.expectedCTC}} </td>
+              </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons 
+          aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
+  </div>

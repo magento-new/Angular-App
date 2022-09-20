@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="sign-up-navbar">
+       <mat-toolbar-row>
+          <h3>Sign Up</h3>
+          <div class="sign-btn-div">
+          <button mat-raised-button color="primary" (click)="goToadmin()">Admin</button>
+          <button mat-raised-button color="primary" (click)="goToEmployee()" >Employee</button>
+          <!-- <button mat-raised-button color="primary" routerLink ="/login" routerLinkActive="active">Login</button> -->
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <app-admin *ngIf="adminLink"></app-admin>
+  <app-employee *ngIf="employeeLink"></app-employee>>
+

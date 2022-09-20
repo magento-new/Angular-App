@@ -1,0 +1,124 @@
+<form [formGroup]="salaryForm">
+<table border="1" #content>
+    <tr height="100px"
+        style="color:#ffffff;text-align:center;font-size:24px; font-weight:600;">
+        <td colspan='4'>Salary Slip Details</td>
+    </tr>
+    <tr>
+        <th>Personel NO:</th>
+        <td><input type="text"  formControlName="personalno" [(ngModel)]="personalno"></td>
+        <th>Name</th>
+        <td><input type="text"  formControlName="name" [(ngModel)]="name"></td>
+    </tr>
+    <!-----2 row--->
+    <tr>
+        <th>Bank</th>
+        <td>
+            <select id="sel1" name="Country"formControlName="bank" [(ngModel)]="bank"  class="rounded-inputs20 select-select col-md-3">
+                <option *ngFor="let bank of banks" [value]="bank">{{bank}}</option>  
+            
+              </select></td>
+        <th>Bank A/c No.</th>
+        <td>
+            <input type="text" formControlName="bankaccno" [(ngModel)]="bankaccno"></td>
+    </tr>
+    <!------3 row---->
+    <tr>
+        <th>DOB</th>
+        <td><input type="date" formControlName="dob" [(ngModel)]="dob">
+           </td>
+        <th>Lop Days</th>
+        <td><input type="text" formControlName="lopdays" [(ngModel)]="lopdays"></td>
+    </tr>
+    <!------4 row---->
+    <tr>
+        <th>PF No.</th>
+        <td><input type="text" formControlName="pfno" [(ngModel)]="pfno"></td>
+        <th>STD days</th>
+        <td><input type="text" formControlName="stddays" [(ngModel)]="stddays"></td>
+    </tr>
+    <!------5 row---->
+    <tr>
+        <th>Location</th>
+        <td><input type="text" formControlName="location" [(ngModel)]="location"></td>
+        <th>Working Days</th>
+        <td><input type="text" formControlName="workingdays" [(ngModel)]="workingdays"></td>
+    </tr>
+    <!------6 row---->
+    <tr>
+        <th>Department</th>
+        <td>
+            <select id="sel1" name="Country"formControlName="department" [(ngModel)]="department"  class="rounded-inputs20 select-select col-md-3">
+                <option *ngFor="let department of departments" [value]="department">{{department}}</option>  
+            
+              </select>
+           </td>
+        <th>Designation</th>
+        <td><input type="text" formControlName="designation" [(ngModel)]="designation"></td>
+    </tr>
+
+<tr></tr>
+<br />
+    <tr>
+        <th>Earnings</th>
+        <th>Amount</th>
+        <th>Deductions</th>
+        <th>Amount</th>
+    </tr>
+    <tr>
+        <td>Basic</td>
+        <td><input type="text" formControlName="basic" [(ngModel)]="basic" (change)="badicPay()"></td>
+        <td>provident fund</td>
+        <td><input type="text" formControlName="pf" [(ngModel)]="pf" (change)="grossDedut()"></td>
+    </tr>
+    <tr>
+        <td>House Rent Allowance</td>
+        <td><input type="text" formControlName="houserent" [(ngModel)]="houserent" (change)="grossearnCal()"></td>
+        <td>professional tax</td>
+        <td><input type="text" formControlName="tax" [(ngModel)]="tax" (change)="grossDedut()"></td>
+    </tr>
+    <tr>
+        <td>special Allowance</td>
+        <td><input type="text" formControlName="specialallowance" [(ngModel)]="specialallowance"></td>
+        <td>Income tax</td>
+        <td><input type="text" formControlName="incometax" [(ngModel)]="incometax" (change)="grossDedut()"></td>
+    </tr>
+    <tr>
+        <td>conveyance</td>
+        <td><input type="text" formControlName="conveyance" [(ngModel)]="conveyance" (change)="grossearnCal()"></td>
+    </tr>
+    <tr>
+        <td>ADD Special allowance</td>
+        <td><input type="text" formControlName="ADD" [(ngModel)]="ADD" (change)="grossearnCal()"></td>
+    </tr>
+    <tr>
+        <td>shift Allowance</td>
+        <td><input type="text" formControlName="shift" [(ngModel)]="shift" (change)="grossearnCal()"></td>
+    </tr>
+    <tr>
+        <td>bonus</td>
+        <td><input type="text" formControlName="bonus" [(ngModel)]="bonus" (change)="grossearnCal()"></td>
+    </tr>
+    <tr>
+        <td>medical Allowance</td>
+        <td><input type="text" formControlName="medical" [(ngModel)]="medical" (change)="grossearnCal()"></td>
+    </tr>
+    <tr>
+        <th>Gross Earnings</th>
+        <td><input type="text" formControlName="grossearn" [(ngModel)]="grossearn" (change)="grossearnCal()"></td>
+        <th>Gross Deductions</th>
+        <td><input type="text" formControlName="grossdeduction" [(ngModel)]="grossdeduction" (change)="grossearnCal()"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><strong>NET PAY</strong></td>
+        <td><input type="text" formControlName="netpay" [(ngModel)]="netpay"></td>
+        <td></td>
+    </tr>
+</table>
+</form>
+<div class="pdf">
+    <button (click)="save()">Save</button>
+<button (click)="onSubmit()">Export To PDF</button>
+<button (click)="exportAsXLSX()">Export To excel</button>
+</div>

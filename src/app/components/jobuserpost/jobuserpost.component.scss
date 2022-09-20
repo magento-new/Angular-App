@@ -1,0 +1,65 @@
+.banner
+{
+    background-image: url('../../../assets/bannerImg.jpg');
+    height: 400px;
+    background-position: center top;
+    background-size: cover;
+}
+.content
+{
+    top: 30%;
+    left: 20%;
+    position: absolute;
+}
+.content h1
+{
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+  
+}
+.content h2
+{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+  
+}
+.content a 
+{
+    text-decoration: none;
+    background: linear-gradient(to bottom, white, #800080);
+    font-size: 18px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.content a:hover 
+{
+    color: #800080;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    /* font-size: 20px; */
+}
+
+th {
+    background: #000;
+    padding: 20px;
+    color: #fff;
+    font-size: 15px;
+        
+}
+h1{
+    padding-left: 0;
+    text-align: center;
+}
+
+.job_user_post_outer h1 {
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 500;
+}

@@ -1,0 +1,28 @@
+<mat-drawer-container class="container" fullscreen>
+  <mat-drawer #drawer mode="side">
+    <div class="logo">
+      <a><img src="../assets//samLogo.png" alt=""></a>
+      <a class="user_icon"><img *ngIf="!isloginbtnVisible" src="../assets//user1.png" alt=""></a>
+    </div>
+  <app-home-page></app-home-page>
+  </mat-drawer>
+  <mat-drawer-content>
+    <nav>
+      <mat-toolbar>
+        <button mat-icon-button  (click)="drawer.toggle()">
+           <mat-icon >menu</mat-icon>
+         </button> 
+        <span class="spacer"></span>
+        <!-- <mat-icon style="margin-right: 20px;" matBadge="{{badgeCount}}" (click)="openModal()">notifications</mat-icon> -->
+        <!-- <mat-icon style="margin-right: 20px;">share</mat-icon> -->
+        <div class="appspan">
+          <button style="margin-right: 20px;" *ngIf="isloginbtnVisible" (click)="goToLogin()" mat-raised-button color="primary">Login</button>
+          <button style="margin-right: 20px;" *ngIf="!isloginbtnVisible" (click)="goToLogout()" mat-raised-button color="primary">Logout</button>
+        </div>
+      </mat-toolbar>
+    </nav>
+    <mat-list>
+      <router-outlet></router-outlet>
+    </mat-list>
+  </mat-drawer-content>
+</mat-drawer-container>

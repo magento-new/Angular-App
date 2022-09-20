@@ -1,0 +1,53 @@
+<table>
+    <tr>
+        <th>EmpId</th>
+        <th>Emp Name</th>
+        <th>Award Name</th>
+        <th>Gift</th>
+        <th>Award Date</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let emp of awardEmpList; let i = index">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.award}}</td>
+        <td>{{emp.gift}}</td>
+        <td>{{emp.joinDate}}</td>
+        <td>
+            <button mat-stroked-button color="primary" (click)="editAward(emp, i)">Edit</button> &nbsp;
+            <button mat-stroked-button color="warn" (click)="deleteEmp(emp, i)">Delete</button>
+        </td>
+    </tr>
+    
+</table>
+<div *ngIf="edit">
+    <mat-card>
+        <h1 style="text-align: center;background: #800080;color:#fff;padding: 15px;"> Edit leave Details</h1>
+   
+     <form  [formGroup]="awardForm"  *ngFor="let arr of editEmp">
+        
+    <mat-form-field>
+        <label for="empName">Emp Name</label> 
+        <input   formControlName="name"  value="{{arr.name}}">
+       </mat-form-field>
+           <mat-form-field>
+            <label for="empCode">Award Name</label> 
+            <input type="text"   formControlName="award"  value="{{arr.award}}">
+           </mat-form-field>          
+            <mat-form-field>
+                <label for="Dept">Gift</label> 
+                <input type="text"  formControlName="gift" value="{{arr.gift}}">
+            </mat-form-field>
+            <mat-form-field>
+                <label for="fromDate">Award Date</label> 
+              <input type="text"    formControlName="joinDate" value="{{arr.joinDate}}" placeholder="From Date">
+            </mat-form-field>         
+         
+      
+    </form>
+    <div style="text-align: center">
+    <button class="button" mat-raised-button color="primary" style="margin-right: 20px;" (click)="update()">Done</button> 
+    <button class="button" mat-raised-button color="Secondary" (click)="Cancel()">Cancel</button>  
+</div>
+    </mat-card>
+    </div>

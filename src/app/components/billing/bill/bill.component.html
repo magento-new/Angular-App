@@ -1,0 +1,65 @@
+<div class="card shadow mb-4">   
+    <div class="card-body">
+        <div class="table-responsive" *ngIf="userType==='employee'">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="background-color: white;">
+                                    <p>Billing List </p>                    
+                
+                <span class="spacer"></span>
+                <tr>
+                    <th>Date</th>  
+                    <th>Name</th>                    
+                    <th>No of Product</th> 
+                    <th>Amount</th>   
+                    <th>Payment Mode</th> 
+                    <th>Created By</th>  
+                    <th>Status</th>                  
+                </tr>
+                <mat-divider></mat-divider>
+                
+                <tr *ngFor="let entry of bill; index as i">
+                    <td>{{ entry.date }}</td>
+                    <td>{{ entry.name }}</td>
+                    <td>{{ entry.qty }}</td>
+                    <td>{{ entry.amount }}</td>
+                    <td>{{ entry.paymentMode }}</td>
+                    <td>{{ entry.CreatedBy }}</td> 
+                    <td>{{ entry.status }}</td>                   
+                    </tr>
+            </table>
+        </div>
+        <div class="table-responsive"  *ngIf="userType==='admin'">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="background-color: white;">
+                                    <p>Billing List </p>                    
+                
+                <span class="spacer"></span>
+                <tr>
+                    <th>Date</th>  
+                    <th>Name</th>                    
+                    <th>No of Product</th> 
+                    <th>Amount</th>   
+                    <th>Payment Mode</th> 
+                    <th>Created By</th>  
+                    <th>Status</th>   
+                    <th>Action</th>               
+                </tr>
+                <mat-divider></mat-divider>
+                
+                <tr *ngFor="let entry of bill; index as i">
+                    <td>{{ entry.date }}</td>
+                    <td>{{ entry.name }}</td>
+                    <td>{{ entry.qty }}</td>
+                    <td>{{ entry.amount }}</td>
+                    <td>{{ entry.paymentMode }}</td>
+                    <td>{{ entry.CreatedBy }}</td> 
+                    <td>{{ entry.status }}</td>     
+                    <td><p style='color:green; cursor: pointer;text-align: center; font-weight: bold' >
+                        <span (click)="onReqAdmin(i)"><u>Approve</u></span>
+                      </p></td>              
+                    </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

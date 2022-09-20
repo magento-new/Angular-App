@@ -1,0 +1,196 @@
+body {
+    background-color: #F6F6F6;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.brand-section {
+    padding: 10px 40px;
+}
+
+.logo {
+    width: 50%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-6 {
+    width: 50%;
+    flex: 0 0 auto;
+}
+.title_section {
+    width: 100%;
+    flex: 0 0 auto;
+    text-align: center;
+    font-size: 25px;
+}
+.title_section select {
+    padding: 10px 20px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+}
+.content h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+.company-details {
+    float: right;
+    text-align: right;
+}
+
+.body-section {
+    padding: 16px;
+    border: 1px solid #555;
+    background-color: #f3f3f3;
+}
+
+.heading {
+    font-size: 20px;
+    margin-bottom: 08px;
+}
+
+.sub-heading {
+    color: #262626;
+    margin-bottom: 05px;
+}
+
+table tr, 
+table td, 
+table th {
+    border: 1px solid black;
+    background-color: white;
+    margin: auto;
+    margin-top: 5%;
+    color: black;
+    text-align: left;
+    padding: 6px 8px;
+}
+table th {
+    color: #fff;
+    font-weight: normal;
+    background-color: #000;
+    border-bottom: solid 2px #d8d8d8;
+    position: sticky;
+    top: 0;
+    padding: 10px 8px;
+    font-size: 16px;
+}
+
+.text-right {
+    text-align: end;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.float-right {
+    float: right;
+}
+
+.head{
+    height: 100px;
+    background: #fff;
+    text-align: center;
+}
+.foot{
+    height:40px;
+
+}
+.invoiceco{
+    border: 1px solid #fff;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.content{
+    color: #fff !important;
+    text-align: center;
+    margin-top:20px;
+}
+.bill{
+    color: #000;
+    margin-left: 15%;
+    margin-top: 44px;
+    width:50%;
+    display:inline-block;
+    text-align:left;
+}
+.total{
+    text-align: right;
+    color: #000;
+    padding-top: 7px;
+    margin-right: 13%;
+}
+.coampany{
+    color: #000;
+   
+    margin-top: 20px; 
+  
+    display:inline-block;
+    text-align:right;
+
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+ 
+    width: 72%;
+ 
+    margin-left: 15%;
+    color: #000 !important;
+  }
+  th {
+    border: 0px solid #dddddd;
+    text-align: left;
+    padding: 15px;
+  }
+  
+  td {
+    border: 0px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .pdf {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    button {
+        background: linear-gradient(to bottom, #000, #000);
+        color: #fff !important;
+        padding: 15px 15px;
+        cursor: pointer;
+        margin-left: 20px;
+        font-weight: 600;
+    }
+}

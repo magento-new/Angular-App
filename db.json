@@ -1,0 +1,459 @@
+{
+  "expense": [
+    {
+      "id": 3,
+      "empid": "1",
+      "item": "Test",
+      "amount": "200",
+      "category": "Food",
+      "description": "Test",
+      "spendOn": "2022-07-06",
+      "status": "Pending"
+    },
+    {
+      "id": 4,
+      "empid": "1",
+      "item": "Pendrive",
+      "amount": "500",
+      "category": "Electronic Item",
+      "description": "Pendrive",
+      "spendOn": "2022-07-18",
+      "status": "Pending"
+    }
+  ],
+  "paySlip": [
+    {
+      "personalno": "123231",
+      "name": "dsfds",
+      "bank": "State Bank of India",
+      "bankaccno": "sdfdsf",
+      "dob": "34",
+      "lopdays": "34",
+      "pfno": "234432",
+      "stddays": "4",
+      "location": "test",
+      "workingdays": "34",
+      "department": "HR",
+      "designation": "manger",
+      "basic": "25000",
+      "pf": 3000,
+      "houserent": 4500,
+      "tax": 200,
+      "specialallowance": 2500,
+      "incometax": 7575,
+      "conveyance": 6250,
+      "ADD": 3000,
+      "shift": 5000,
+      "bonus": 3000,
+      "medical": 1250,
+      "grossearn": 50500,
+      "grossdeduction": 10775,
+      "netpay": 39725,
+      "id": 1
+    },
+    {
+      "personalno": "BXn4344",
+      "name": "RAM",
+      "bank": "Indian Bank",
+      "bankaccno": "3334",
+      "dob": "23-11-1987",
+      "lopdays": "0",
+      "pfno": "21312321",
+      "stddays": "30",
+      "location": "123321",
+      "workingdays": "30",
+      "department": "Finance",
+      "designation": "Manager",
+      "basic": "5000",
+      "pf": 600,
+      "houserent": 900,
+      "tax": 200,
+      "specialallowance": 500,
+      "incometax": 2115,
+      "conveyance": 1250,
+      "ADD": 600,
+      "shift": 5000,
+      "bonus": 600,
+      "medical": 250,
+      "grossearn": 14100,
+      "grossdeduction": 2915,
+      "netpay": 11185,
+      "id": 2
+    },
+    {
+      "personalno": "1",
+      "name": "Souganthika Subburaman",
+      "bank": "Axis Bank",
+      "bankaccno": "123",
+      "dob": "2022-06-28",
+      "lopdays": "1",
+      "pfno": "1",
+      "stddays": "1",
+      "location": "aa",
+      "workingdays": "1",
+      "department": "IT",
+      "designation": "q",
+      "basic": "1000",
+      "pf": 120,
+      "houserent": 180,
+      "tax": 200,
+      "specialallowance": 100,
+      "incometax": 1023,
+      "conveyance": 250,
+      "ADD": 120,
+      "shift": 5000,
+      "bonus": 120,
+      "medical": 50,
+      "grossearn": 6820,
+      "grossdeduction": 1343,
+      "netpay": 5477,
+      "id": 3
+    }
+  ],
+  "reqevent": [
+    {
+      "scheduleTime": "2022-07-05T18:30:00.000Z",
+      "eventName": "Test1",
+      "selectionType": "edit",
+      "id": 1,
+      "reqStatus": "Approved",
+      "reqBy": "test"
+    },
+    {
+      "scheduleTime": "2022-07-12T18:30:00.000Z",
+      "eventName": "Test Event2",
+      "selectionType": "new",
+      "id": 2,
+      "reqStatus": "Approved",
+      "reqBy": "test"
+    },
+    {
+      "scheduleTime": "2022-07-27T18:30:00.000Z",
+      "eventName": "Event1",
+      "selectionType": "new",
+      "id": 4,
+      "reqStatus": "Approved",
+      "reqBy": "test"
+    },
+    {
+      "scheduleTime": "2022-07-25T18:30:00.000Z",
+      "eventName": "Event1",
+      "selectionType": "new",
+      "id": 5,
+      "reqStatus": "Approved",
+      "reqBy": "test"
+    },
+    {
+      "scheduleTime": "2022-07-18T18:30:00.000Z",
+      "eventName": "Event3",
+      "selectionType": "new",
+      "id": 7,
+      "reqStatus": "Pending",
+      "reqBy": "test"
+    },
+    {
+      "scheduleTime": "2022-07-25T18:30:00.000Z",
+      "eventName": "Event2",
+      "selectionType": "edit",
+      "id": 3,
+      "reqStatus": "Pending",
+      "reqBy": "test"
+    },
+    {
+      "scheduleTime": "2022-07-18T18:30:00.000Z",
+      "eventName": "Meeting",
+      "selectionType": "new",
+      "id": 8,
+      "reqStatus": "Pending",
+      "reqBy": "test"
+    }
+  ],
+  "event": [
+    {
+      "scheduleTime": "2022-07-12T18:30:00.000Z",
+      "eventName": "Test Event2",
+      "selectionType": "new",
+      "id": 2
+    },
+    {
+      "scheduleTime": "2022-07-25T18:30:00.000Z",
+      "eventName": "Event2",
+      "selectionType": "edit",
+      "id": 3
+    },
+    {
+      "scheduleTime": "2022-07-27T18:30:00.000Z",
+      "eventName": "Event1",
+      "selectionType": "new",
+      "id": 4
+    },
+    {
+      "scheduleTime": "2022-07-18T18:30:00.000Z",
+      "eventName": "Event3",
+      "selectionType": "new",
+      "id": 7
+    },
+    {
+      "scheduleTime": "2022-07-18T18:30:00.000Z",
+      "eventName": "Meeting",
+      "selectionType": "new",
+      "id": 8
+    },
+    {
+      "scheduleTime": "2022-07-14T18:30:00.000Z",
+      "eventName": "Jul15",
+      "selectionType": "new",
+      "id": 9
+    }
+  ],
+  "jobApply": [
+    {
+      "aboutcompany": "company details ",
+      "description": "frontend development job portal",
+      "skills": "html5,css3,bootstrap5",
+      "experience": "5",
+      "notice": "3",
+      "serving": "2",
+      "currentctc": "4",
+      "expectedctc": "5",
+      "id": 1
+    },
+    {
+      "aboutcompany": "Test",
+      "description": "sdfds",
+      "skills": "sdfds",
+      "experience": "sdfd",
+      "notice": "sdf",
+      "serving": "sdf",
+      "currentctc": "sdf",
+      "expectedctc": "sdf",
+      "id": 2
+    },
+    {
+      "aboutcompany": "Test",
+      "description": "Test",
+      "skills": "TEst",
+      "experience": "12",
+      "notice": "50",
+      "serving": "no",
+      "currentctc": "54",
+      "expectedctc": "57",
+      "id": 3
+    },
+    {
+      "aboutcompany": "Test",
+      "description": "Test",
+      "skills": "ANgular",
+      "experience": "10",
+      "notice": "80",
+      "serving": "NO",
+      "currentctc": "6",
+      "expectedctc": "15",
+      "id": 4
+    },
+    {
+      "aboutcompany": "Test Company",
+      "description": "Test",
+      "skills": "Angular",
+      "experience": "10",
+      "notice": "90",
+      "serving": "No",
+      "currentctc": "20",
+      "expectedctc": "30",
+      "id": 5
+    },
+    {
+      "aboutcompany": "Fid Investment",
+      "description": "FS dev",
+      "skills": "JAVA, CICD",
+      "experience": "10",
+      "notice": "2 months",
+      "serving": "Yes",
+      "currentctc": "20",
+      "expectedctc": "30",
+      "id": 6
+    },
+    {
+      "aboutcompany": "CTS",
+      "description": "LEAD",
+      "skills": "JAVA, Angular, React",
+      "experience": "6",
+      "notice": "1 month",
+      "serving": "No",
+      "currentctc": "50",
+      "expectedctc": "60",
+      "id": 7
+    }
+  ],
+  "jobuserApply": [
+    {
+      "name": "Karthika",
+      "gender": "female",
+      "department": "IT",
+      "designation": "Developer",
+      "email": "test@te.com",
+      "Phone": "4233432343",
+      "address": "Bengalore",
+      "currentcompany": "TCS",
+      "CurrentCTC": "34",
+      "expectedCTC": "45",
+      "totalexperience": "4",
+      "releventexperience": "5",
+      "resume": "C:\\fakepath\\package.json",
+      "id": 1
+    },
+    {
+      "name": "Test2",
+      "gender": "female",
+      "department": "IT",
+      "designation": "Developer",
+      "email": "test@te.com",
+      "Phone": "78293965455",
+      "address": "Bengalore",
+      "currentcompany": "test",
+      "CurrentCTC": "23",
+      "expectedCTC": "34",
+      "totalexperience": "5",
+      "releventexperience": "5",
+      "notice": "45",
+      "resume": "C:\\fakepath\\package.json",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "empid": "1",
+      "item": "Pencel",
+      "amount": "20",
+      "category": "Electronic Item",
+      "description": "test",
+      "spendOn": "3434",
+      "status": "Pending"
+    },
+    {
+      "name": "Ravi",
+      "gender": "male",
+      "department": "HR",
+      "designation": "Manager",
+      "email": "test@sd.com",
+      "Phone": "123456343",
+      "address": "Test, Chennai",
+      "currentcompany": "HP",
+      "CurrentCTC": "20",
+      "expectedCTC": "30",
+      "totalexperience": "6",
+      "releventexperience": "6",
+      "notice": "90",
+      "resume": "C:\\fakepath\\test (1).pdf",
+      "id": 4
+    },
+    {
+      "name": "Ravi",
+      "gender": "male",
+      "department": "It",
+      "designation": "Manager",
+      "email": "Ravi@test.com",
+      "Phone": "7979877986",
+      "address": "Test",
+      "currentcompany": "XYZ company",
+      "CurrentCTC": "25",
+      "expectedCTC": "35",
+      "totalexperience": "12",
+      "releventexperience": "10",
+      "notice": "90",
+      "resume": "C:\\fakepath\\package.json",
+      "id": 5
+    }
+  ],
+  "createEmployee": [
+    {
+      "firstName": "admin",
+      "lastName": "123456",
+      "email": "sdf@dfd.com",
+      "password": "123456",
+      "username": "test",
+      "userType": "admin",
+      "id": 1
+    },
+    {
+      "firstName": "TestUser",
+      "lastName": "User2",
+      "mobile": "12345678",
+      "email": "test@sd.com",
+      "address": "Test Address",
+      "username": "test",
+      "password": "123456",
+      "userType": "employee",
+      "id": 2
+    },
+    {
+      "firstName": "Test2",
+      "options": "male",
+      "dept": "sddsf",
+      "degn": "dfds",
+      "email": "sdf@dfd.com",
+      "password": "sdf",
+      "id": 3
+    },
+    {
+      "firstname": "test",
+      "lastname": "test",
+      "mobile": "34234234",
+      "email": "test@sd.com",
+      "address": "test",
+      "username": "test",
+      "password": "123456",
+      "userType": "employee",
+      "id": 4
+    },
+    {
+      "firstName": "Test2",
+      "options": "male",
+      "dept": "It",
+      "degn": "Manager",
+      "email": "test@ta.com",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "firstName": "e",
+      "lastName": "Test",
+      "mobile": "2343223e4",
+      "email": "test@123.com",
+      "address": "ewewrerw",
+      "username": "test",
+      "password": "123456",
+      "userType": "employee",
+      "id": 6
+    },
+    {
+      "firstName": "test1",
+      "options": "male",
+      "dept": "HR",
+      "degn": "Manager",
+      "email": "ram@test.com",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "firstName": "Meena",
+      "options": "female",
+      "dept": "Admin",
+      "degn": "Developer",
+      "email": "meena@test.com",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "firstName": "PAVITHRA",
+      "lastName": "ETHIRAJAN",
+      "email": "pa@gmail.com",
+      "password": "Dhanya*12",
+      "username": "paviethi",
+      "userType": "admin",
+      "id": 9
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

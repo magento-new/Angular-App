@@ -1,0 +1,58 @@
+form{
+  
+    align-items: center;
+    table{
+        width: 70%;
+        margin: auto;
+    }
+}
+p{
+    text-align: center;
+    font-size: large;
+    margin: 2%;
+}
+h1{
+    text-align: center;
+    margin: 2%;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+}
+mat-divider{
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+table tr, 
+table td, 
+table th {
+    border: 1px solid black;
+    background-color: white;
+    margin: auto;
+    margin-top: 5%;
+    color: black;
+    text-align: left;
+    padding: 6px 8px;
+}
+table th {
+    color: #fff;
+    font-weight: normal;
+    background-color: #000;
+    border-bottom: solid 2px #d8d8d8;
+    position: sticky;
+    top: 0;
+    padding: 10px 8px;
+    font-size: 16px;
+}
+
+.itemdetail_report_outer input {
+    padding: 10px 20px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+    margin: 0px 10px;
+}

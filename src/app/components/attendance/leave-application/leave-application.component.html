@@ -1,0 +1,95 @@
+<table style="background-color: white;">
+    <div>
+        <p>Leave Application List - {{leaveArr.length}}</p>
+    </div>
+    <span class="spacer"></span>
+    <tr>
+        <th>EmpId</th>
+        <th>Emp Name</th>
+        <th>EmpCode</th>
+        <th>Emp CardNo</th>
+        <th>Department</th>
+        <th>FromDate</th>
+        <th>ToDate</th>
+        <th>type</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    <mat-divider></mat-divider>
+    <tr *ngFor="let leave of leaveArr; index as i">
+        <td>{{leave.employeeId}}</td>
+        <td>{{leave.employeeName}}</td>
+        <td>{{leave.EmpCode}}</td>
+        <td>{{leave.employeeId}}</td>
+        <td>{{leave.deptId}}</td>
+        <td>{{leave.fromdate}}</td>
+        <td>{{leave.todate}}</td>
+        <td>{{leave.leavetype}}</td>
+        <td>{{leave.status}}</td>
+        <td>
+            <button mat-button color="primary" (click)="editLeave(i)">Edit</button>
+            <button mat-button color="warn" (click)="deleteLeave(i)">Delete</button>
+        </td>
+    </tr>
+    <!-- <tr *ngFor="let ele of myresult">
+        <td>{{ele.id}}</td>
+        <td>{{ele.name}}</td>
+        <td>{{ele.options}}</td>
+        <td>{{ele.email}}</td>
+        <td>{{ele.mobile}}</td>
+        <td>{{ele.joinDate}}</td>
+        <td>
+            <button mat-stroked-button color="primary">Edit</button> &nbsp;
+            <button mat-stroked-button color="warn">Delete</button>
+        </td>
+    </tr> -->
+</table>
+
+        
+<div *ngIf="edit">
+    <mat-card>
+        <h1 style="text-align: center;background: #800080;color:#fff;padding: 15px;"> Edit leave Details</h1>
+    <form [formGroup]="leaveForm">
+        
+    <mat-form-field>
+        <label for="empName">Emp Name</label> 
+        <input  type="text"  formControlName="employeeName" >
+       </mat-form-field>
+
+           <mat-form-field>
+            <label for="empCardNo">Emp Card No</label> 
+            <input  type="text"  formControlName="employeeId" >
+           </mat-form-field>
+            <mat-form-field>
+                <label for="Dept">Department</label> 
+                <input type="text"   formControlName="deptId" >
+            </mat-form-field>
+            <mat-form-field>
+                <label for="fromDate">From Date</label> 
+              <input type="text"   formControlName="fromdate" placeholder="From Date">
+            </mat-form-field>
+            <mat-form-field>
+                <label for="fromDate">To Date</label> 
+                <input type="text"  formControlName="todate" placeholder="To Date">
+           </mat-form-field>
+           <mat-form-field>
+            <label for="fromDate">Leave Type</label> 
+            <input type="text"  formControlName="leavetype"  placeholder="Leave Type">
+       </mat-form-field>
+       <mat-form-field>
+        <label for="fromDate">Leave Reason</label> 
+        <input type="text"  formControlName="leavereason"  placeholder="Leave Reason">
+   </mat-form-field>
+       
+       <mat-form-field>
+        <select id="leaveStatus" matInput (change)="changeStatus($event)" [(ngModel)]="selectedStatus" formControlName="status">
+            <option *ngFor="let Statusarr of statusArr" [ngValue]="Statusarr">{{Statusarr}}</option>
+        </select>
+   </mat-form-field>
+    </form>
+    <div style="text-align: center">
+    <button class="button" mat-raised-button color="primary" style="margin-right: 20px;" (click)="Done()">Done</button> 
+    <button class="button" mat-raised-button color="Secondary" (click)="Cancel()">Cancel</button>  
+</div>
+    </mat-card>
+    </div>

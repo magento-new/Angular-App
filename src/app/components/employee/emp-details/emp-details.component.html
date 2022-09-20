@@ -1,0 +1,54 @@
+<mat-card class="card">
+    <mat-card-content>
+        <h2 style="text-align: center;">Update Employee</h2>
+        <form [formGroup]="userForm"  (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                       <img src="">
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <input type="file" >
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <label>FirstName</label>
+                        <input type="text" matInput formControlName="firstName" placeholder="First Name">
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <label>Last Name</label>
+                        <input type="text" matInput formControlName="lastName" placeholder="last Name">
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <label>Mobile</label>
+                            <!-- mychange formConttrolName phno to mobile-->
+                            <input type="text" matInput formControlName="mobile" placeholder="Mobile"
+                             >
+                            <!-- <div *ngIf="submitted && f.dept.errors" class="invalid-feedback">
+                                <div *ngIf="f.dept.errors.required">First Name is required</div>
+                            </div> -->
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <label>Address</label>
+                            <input type="text" matInput formControlName="address" placeholder="Address">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <label>Email</label>
+                        <input type="email" matInput formControlName="email" placeholder="Email">
+                    </mat-form-field>
+                  
+                </div>
+            </div>
+        </form>
+        <div style="text-align: center;" >
+            <button class="button" mat-raised-button color="primary" (click)="onSubmit()">SUBMIT</button>
+        </div>
+    </mat-card-content>
+</mat-card>

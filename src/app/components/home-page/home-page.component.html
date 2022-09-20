@@ -1,0 +1,130 @@
+<!-- <div *ngIf="showAllDetails && (userType==='admin' || userType==='employee')"> -->
+<mat-nav-list *ngIf="userType==='admin' || userType==='employee'">
+    <div class="nav-item" *ngIf="userType==='admin'">
+        <button mat-list-item routerLink="/dashboard">Dashboard</button>
+    </div>
+
+    <div class="nav-item" *ngIf="userType==='admin'">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Employees</mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item routerLink="/employee/create">EmployeesCreate</a>
+            <a mat-list-item routerLink="/employee/list">EmployeeList</a>
+            <a mat-list-item routerLink="/employee/imports">Employee Imports</a>
+            <a mat-list-item routerLink="/employee/awards">Awards List</a>
+        </mat-expansion-panel>
+    </div>
+    <div class="nav-item" *ngIf="userType==='employee'">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Employees</mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item routerLink="/employee/details">Employee Details</a>
+        </mat-expansion-panel>
+    </div>
+    <div class="nav-item">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Attendance</mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item routerLink="/attendance/manual">ManualPunching</a>
+            <a *ngIf="userType==='admin'" mat-list-item routerLink="/attendance/leave">LeaveApplication</a>
+            <!-- <a *ngIf="userType==='admin'" mat-list-item routerLink="/attendance/verify">Attendance Verification</a>
+            <a *ngIf="userType==='admin'" mat-list-item routerLink="/attendance/import">Attendance Import</a> -->
+            <a *ngIf="userType==='admin'" mat-list-item routerLink="/attendance/daily">Daily Attendance</a>
+            <a *ngIf="userType==='admin'" mat-list-item routerLink="/events">Calendar</a>
+            <a mat-list-item routerLink="/eventsrequest">Events</a>
+        </mat-expansion-panel>
+    </div>
+    <div class="nav-item" *ngIf="userType==='admin'">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Stocks</mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item routerLink="/billing/product">StockSummary </a>
+            <!-- <a mat-list-item routerLink="/stockSummary">Stocks</a> -->
+            <a mat-list-item routerLink="/billing/addproduct">Add Stock</a>
+            <!-- <a mat-list-item routerLink="/LowStockSummary">LowStockSummary</a>
+            <a mat-list-item routerLink="/itemwiseP&L">ItemWise Profit & Loss</a> -->
+            <a mat-list-item routerLink="/dailyExpenses">DailyExpenses</a>
+            <a mat-list-item routerLink="/itemDetailReport">ItemDetailReport</a>
+        </mat-expansion-panel>
+    </div>
+    <div class="nav-item" *ngIf="userType==='employee'">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Stocks</mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item routerLink="/billing/product">Stocks </a>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Expenses</mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item routerLink="/expensesDetails">DailyExpenses</a>
+            <a mat-list-item routerLink="/expenses">AddExpenses</a>
+
+        </mat-expansion-panel>
+    </div>
+    <div class="nav-item" *ngIf="userType==='admin'">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Finance</mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item routerLink="/gst">GST</a>
+            <a mat-list-item routerLink="/invoice">Invoice</a>
+            <a mat-list-item routerLink="/addinvoice">Add Invoice</a>
+            <a mat-list-item routerLink="/salary">Salary</a>
+            <!-- <a mat-list-item routerLink="/incentive">Incentive</a> -->
+        </mat-expansion-panel>
+    </div>
+    <div class="nav-item" *ngIf="userType==='admin'">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Billing</mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item routerLink="/billing/location">Location</a>
+
+            <!-- <a mat-list-item routerLink="/employee/imports">Promo/Coupon Code</a> -->
+            <a mat-list-item routerLink="/billing/bill">Bill</a>
+            <a mat-list-item routerLink="/billing/generateBill">Generate Bill</a>
+        </mat-expansion-panel>
+    </div>
+    <div class="nav-item" *ngIf="userType==='employee'">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Billing</mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item routerLink="/billing/bill">Bill</a>
+            <a mat-list-item routerLink="/billing/generateBill">Generate Bill</a>
+        </mat-expansion-panel>
+    </div>
+    <div class="nav-item" >
+        <button mat-list-item  routerLink="/scheduler">Scheduler</button>
+    </div>
+    <div class="nav-item" >
+        <button mat-list-item  routerLink="/task-management">Task Management</button>
+    </div>
+    <div class="nav-item">
+        <button mat-list-item routerLink="/payslip">Payslip</button>
+    </div>
+    <!-- <div class="nav-item">
+        <button mat-list-item routerLink="/provisionalFund">Provisional Fund</button>
+    </div> -->
+</mat-nav-list>
+<!-- </div> -->
+
+<!-- <div *ngIf="!showAllDetails"> -->
+<mat-nav-list *ngIf="!(userType==='admin' && userType==='employee') && (userType==='guest' || userType ==='')">
+    <div class="nav-item">
+        <button style="width: 250px" mat-list-item routerLink="/login">Login</button>
+    </div>
+    <div class="nav-item">
+        <button style="width: 250px" mat-list-item routerLink="/registration">Register</button>
+    </div>
+    <div class="nav-item">
+        <button style="width: 250px" mat-list-item routerLink="/guestuser">About</button>
+    </div>
+</mat-nav-list>
+<!-- </div> -->

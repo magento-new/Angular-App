@@ -1,0 +1,9 @@
+<div class="listcompany">
+    <h1 style="text-align: center;">Companies List</h1>
+    <div *ngFor="let company of company; let i = index;">
+        <ul>
+            <li><a routerLink="/workspace">{{company.companyName}}</a></li>
+        </ul>
+        </div>
+
+</div>

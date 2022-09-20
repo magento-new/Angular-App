@@ -1,0 +1,50 @@
+{
+    "data":[
+        {
+            "id":"1",
+            "name":"Sameer",
+            "options":"Male",
+            "mobile":"9874563210",
+            "joinDate":"2022-25-12",
+            "email":"sam@gmail.com",
+            "password":"sam",
+            "award":"Best Architect",
+            "gift":"cash",
+            "attendance":"absent",
+            "leavetype":"Annual",
+            "dept":"IT",
+            "degn":"Software Engineer"
+
+        },{
+            "id":"2",
+            "name":"Bhawani",
+            "options":"Female",
+            "mobile":"9874563210",
+            "joinDate":"2022-25-12",
+            "email":"asd@gmail.com",
+            "password":"sam",
+            "award":"Best Architect",
+            "gift":"voucher",
+            "attendance":"present",
+            "leavetype":"Annual",
+            "dept":"IT",
+            "degn":"Software Engineer"
+
+        },{
+            "id":"3",
+            "name":"Kavya",
+            "options":"Female",
+            "mobile":"9874563210",
+            "joinDate":"2022-25-12",
+            "email":"qwe@gmail.com",
+            "password":"sam",
+            "award":"Best Architect",
+            "gift":"cash",
+            "attendance":"absent",
+            "leavetype":"sick",
+            "dept":"IT",
+            "degn":"Architect"
+        }
+        
+    ]
+}

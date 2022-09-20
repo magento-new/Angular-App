@@ -1,0 +1,26 @@
+<div class="card shadow mb-4">
+    <div class="card-header add_location_btn py-3">        
+        <a mat-list-item style="cursor: pointer; text-decoration: underline;" (click)="addLocationr()">New Location</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="background-color: white;">
+                                    <p>Location List </p>                    
+                
+                <span class="spacer"></span>
+                <tr>
+                    <th>Name</th>                    
+                    <th>Address</th>   
+                </tr>
+                <mat-divider></mat-divider>
+                
+                <tr *ngFor="let entry of location; index as i">
+                    <td>{{ entry.Name }}</td>
+                    <td>{{ entry.Address }}</td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,38 @@
+
+
+.actions{
+    text-align: right;
+    button{
+        margin: 1%;
+    }
+}
+
+.employee_imports_outer .container {
+    background: #fff;
+    width: 500px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    border-top: 10px solid #ff008c;
+    border-radius: 5px;
+    color: #555;
+    padding: 20px;
+    background-color: #f6f6f6;
+    margin-top: 50px;
+}
+.employee_imports_outer .container h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    margin: 0;
+    margin-bottom: 15px;
+    color: #000;
+    text-align: center;
+}
+.employee_imports_outer .mat-form-field {
+    width: 100%;
+    padding: 0px;
+}

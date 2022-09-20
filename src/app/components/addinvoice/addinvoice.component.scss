@@ -1,0 +1,153 @@
+form {
+  width: 100%;
+
+}
+
+.login-container {
+  margin-top: 50px;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
+
+
+.login-content {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.login-toolbar {
+  justify-content: center;
+}
+
+.mat-form-field {
+  width: 100%;
+  display: block;
+}
+.mat-raised-button {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+}
+.btnSubmit{
+  display:flex;
+  justify-content: space-around;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  background: #f2f2f2;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.login-toolbar {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 0;
+  text-align: center;
+}
+
+.form_wrapper {
+  background: #fff;
+  width: 500px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  border-top: 10px solid #ff008c;
+  border-radius: 5px;
+  color: #555;
+  padding: 20px;
+  background-color: #f6f6f6;
+}
+.form_wrapper h2 {
+  font-size: 25px;
+  color: #000;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.form_wrapper .title_container {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.form_wrapper h3 {
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 0;
+}
+.form_wrapper label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+.form_wrapper .row {
+  margin: 10px -15px;
+}
+.form_wrapper .row > div {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.form_wrapper .col_half {
+  width: 100%;
+}
+.form_wrapper .input_field {
+  position: relative;
+  margin-bottom: 20px;
+  -webkit-animation: bounce 0.6s ease-out;
+  animation: bounce 0.6s ease-out;
+}
+.form_wrapper input[type=text], 
+.form_wrapper input[type=email], 
+.form_wrapper input[type=password], 
+.form_wrapper input, 
+.form_wrapper select {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+  background-color: #fff;
+}
+.form_wrapper input[type=submit] {
+  background: linear-gradient(to bottom, white, #800080);
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.form_container .row .col_half.last {
+  border-left: 1px solid #cccccc;
+}
+.signup_page h1 {
+color: #fff;
+text-align: center;
+margin-top: 20px;
+}
+
+.form_wrapper .mat-focus-indicator.mat-button-disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}

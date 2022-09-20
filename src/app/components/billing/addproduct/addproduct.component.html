@@ -1,0 +1,36 @@
+<div class="container" style="margin-top: 100px;">
+    <div class="login-content">
+        <div class="form_wrapper">
+            <form [formGroup]="productForm" action="">
+                <h2 class="login-toolbar" color="primary">Add Stock</h2>
+                <div class="input_field">
+                    <input type="text" formControlName="name" placeholder="Name">
+                </div>
+                <div class="input_field">
+                    <input type="text" matInput formControlName="code" placeholder="Code">
+                </div>
+                <div class="input_field">
+                    <input type="text" matInput formControlName="qrcode" placeholder="QRCode">
+                </div>
+                <div class="input_field">
+                    <input type="text" matInput formControlName="price" placeholder="price">
+                </div>
+                <div class="input_field">
+                    <input type="text" matInput formControlName="stack" placeholder="stack">
+                </div>
+                <div class="input_field">
+                    <input type="text" matInput formControlName="location" placeholder="location">
+                </div>
+                <div class="input_field">
+                    <input type="text" matInput formControlName="description" placeholder="Description">
+                </div>
+                <div class="btnSubmit">
+                    <button [disabled]="productForm.invalid" type="submit" (click)="save()" mat-raised-button
+                        color="primary">Save</button>
+                </div>
+               
+            </form>
+           
+        </div>
+    </div>
+</div>

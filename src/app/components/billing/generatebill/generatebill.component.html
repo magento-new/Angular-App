@@ -1,0 +1,35 @@
+<div class="container" style="margin-top: 100px;">
+    <div class="login-content">
+        <div class="form_wrapper">
+            <form [formGroup]="billForm" action="">
+                <h2 class="login-toolbar" color="primary">Generate Bill</h2>
+                <div class="input_field">
+                    Date:
+                    <input type="date" formControlName="date" placeholder="Date">
+                </div>
+                <div class="input_field">
+                    Name: <input type="text" matInput formControlName="name" placeholder="Name">
+                 </div>
+                <div class="input_field">
+                   Qty: <input type="text" matInput formControlName="qty" placeholder="qty">
+                </div>
+                <div class="input_field">
+                   Amount: <input type="text" matInput formControlName="amount" placeholder="Amount">
+                </div>
+                <div class="input_field">
+                    Payment Mode<input type="text" matInput formControlName="paymentMode" placeholder="payment Mode">
+                </div>
+                <div class="input_field">
+                 Created By   <input type="text" matInput formControlName="CreatedBy" placeholder="CreatedBy">
+                </div>
+              
+                <div class="btnSubmit">
+                    <button [disabled]="billForm.invalid" type="submit" (click)="save()" mat-raised-button
+                        color="primary">Save</button>
+                </div>
+               
+            </form>
+           
+        </div>
+    </div>
+</div>

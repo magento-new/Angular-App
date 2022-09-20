@@ -1,0 +1,40 @@
+.container{
+    background-color: #fff;
+    width: 40%;
+    margin: auto;
+    margin-top: 2%;
+    h4{
+        text-align: center;
+    background: #800080;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px;
+    }
+}
+h2{
+   text-align: center;
+   color: #fff;
+   background-color: #800080;
+   padding: 20px;
+}
+.form{
+    padding: 5%;
+    width: 90%;
+}
+.actions{
+    text-align: right;
+    button{
+        margin: 1%;
+    }
+}
+
+table{
+    width: 100%;
+    border: 1px solid #000;
+    tr{
+        border: 1px solid #000;
+        th,td{
+            border: 1px solid #000; 
+        }
+    }
+}

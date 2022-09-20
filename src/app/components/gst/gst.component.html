@@ -1,0 +1,146 @@
+<div class="container" style="margin-top: 100px;">
+    <div class="login-content">
+        <div class="form_wrapper">
+            <form [formGroup]="gstForm" action="">
+                <h2 class="login-toolbar" color="primary" class="colBack">GST Calculator</h2>
+                <div class="input_field">
+                    <label class="colBack">Item</label>
+                    <input type="text" formControlName="item" placeholder="Name">
+                </div>
+                <div class="input_field">
+                    <label class="colBack">Category</label>
+                   
+                    <select id="sel1" name="Country"formControlName="category" [(ngModel)]="category" (change)="gstCal()" class="rounded-inputs20 select-select col-md-3">
+                        <option *ngFor="let list of categorys" [value]="list">{{list}}</option>  
+                    
+                      </select>
+                </div>
+                <div class="input_field">
+                    <label class="colBack">Amount</label>
+                    <input type="text"  formControlName="amount"  [(ngModel)]="amount" placeholder="Amount" (change)="gstCal()">
+                </div>
+                <div class="input_field">
+                    <label class="colBack">GST : {{gstPercent}}</label>
+                    <input type="text"  formControlName="gst"   [(ngModel)]="gst"placeholder="GST">
+                </div>
+                <div class="input_field">
+                    <label class="colBack">Total Amount</label>
+                    <input type="text"  formControlName="totalamount"  [(ngModel)]="totalamount" placeholder="Total Amount">
+                </div>
+              
+                <div class="btnSubmit">
+                    <button [disabled]="gstForm.invalid" type="submit" (click)="downloadPDF()" mat-raised-button
+                        color="primary">Print</button>
+                </div>
+               
+            </form>
+           
+        </div>
+    </div>
+</div>
+<!-- 
+<div class="gst">
+    <div>
+        <p>GST REPORT</p>
+        <p>GSTR1</p>
+        <p>From:<input type="date"> TO:<input type="date"></p>
+        <p><input type="checkbox">Consider non tax transaction as exempted</p>
+    </div>
+
+<table #content>
+    <tr>
+        <th colspan="1">GSTIN/UIN No.</th>
+        <th colspan="1">Party Name</th>
+        <th colspan="1">Sale</th>
+        <th colspan="1">Sale Return</th>
+        <th colspan="1">CESS rate</th>
+        <th colspan="1">Taxable value</th>
+        <th colspan="1">Totals.</th>
+    </tr>
+    <tr *ngFor="let gst of GSTR1; let i = index;">
+        <td colspan="1">{{gst.GSTINUINNo}}</td>
+        <td colspan="1">{{gst.PartyName}}</td>
+        <td colspan="1">{{gst.Sale}}</td>
+        <td colspan="1">{{gst.SaleReturn}}</td>
+        <td colspan="1">{{gst.CESSrate}}</td>
+        <td colspan="1">{{gst.Taxablevalue}}</td>
+        <td colspan="1">{{gst.Totals}}</td>
+    </tr>
+
+</table>
+   <div class="pdf">
+<button (click)="downloadPDF()">Export To PDF</button>
+<button (click)="exportAsXLSX()">Export To excel</button>
+</div>
+</div>
+
+<div class="gst">
+    <div>
+        <p>GSTR2</p>
+        <p>From:<input type="date"> TO:<input type="date"></p>
+        <p><input type="checkbox">Consider non tax transaction as exempted</p>
+    </div>
+
+<table #content>
+    <tr>
+        <th colspan="1">GSTIN/UIN No.</th>
+        <th colspan="1">Party Name</th>
+        <th colspan="1">Sale</th>
+        <th colspan="1">Sale Return</th>
+        <th colspan="1">CESS rate</th>
+        <th colspan="1">Taxable value</th>
+        <th colspan="1">Totals.</th>
+    </tr>
+    <tr *ngFor="let gst of GSTR1; let i = index;">
+        <td colspan="1">{{gst.GSTINUINNo}}</td>
+        <td colspan="1">{{gst.PartyName}}</td>
+        <td colspan="1">{{gst.Sale}}</td>
+        <td colspan="1">{{gst.SaleReturn}}</td>
+        <td colspan="1">{{gst.CESSrate}}</td>
+        <td colspan="1">{{gst.Taxablevalue}}</td>
+        <td colspan="1">{{gst.Totals}}</td>
+    </tr>
+
+</table>
+   <div class="pdf">
+<button (click)="downloadPDF()">Export To PDF</button>
+<button (click)="exportAsXLSX()">Export To excel</button>
+</div>
+</div>
+
+<div class="gst">
+    <div>
+        <p>GSTR3B</p>
+        <p>From:<input type="date"> TO:<input type="date"></p>
+        <p><input type="checkbox">Consider non tax transaction as exempted</p>
+    </div>
+
+<table #content>
+    <tr>
+        <th colspan="1">GSTIN/UIN No.</th>
+        <th colspan="1">Party Name</th>
+        <th colspan="1">Sale</th>
+        <th colspan="1">Sale Return</th>
+        <th colspan="1">CESS rate</th>
+        <th colspan="1">Taxable value</th>
+        <th colspan="1">Totals.</th>
+    </tr>
+    <tr *ngFor="let gst of GSTR1; let i = index;">
+        <td colspan="1">{{gst.GSTINUINNo}}</td>
+        <td colspan="1">{{gst.PartyName}}</td>
+        <td colspan="1">{{gst.Sale}}</td>
+        <td colspan="1">{{gst.SaleReturn}}</td>
+        <td colspan="1">{{gst.CESSrate}}</td>
+        <td colspan="1">{{gst.Taxablevalue}}</td>
+        <td colspan="1">{{gst.Totals}}</td>
+    </tr>
+
+</table>
+   <div class="pdf">
+<button (click)="downloadPDF()">Export To PDF</button>
+<button (click)="exportAsXLSX()">Export To excel</button>
+</div>
+</div>
+          
+           
+          -->

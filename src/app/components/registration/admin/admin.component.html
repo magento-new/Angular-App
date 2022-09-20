@@ -1,0 +1,82 @@
+<div class="login-container">
+    <div class="login-content admin_form">
+        <mat-card>
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <mat-toolbar class="login-toolbar" color="primary">Admin Registration</mat-toolbar>
+                <mat-form-field>
+                    <mat-icon matPrefix>person_outline</mat-icon>
+                    <input type="text" autocomplete="off" matInput formControlName="firstName" placeholder="First name">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-icon matPrefix>person_outline</mat-icon>
+                    <input type="text" autocomplete="off" matInput formControlName="lastName" placeholder="Last name">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-icon matPrefix>person_outline</mat-icon>
+                    <input type="text" autocomplete="off" matInput formControlName="username" placeholder="User name">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-icon matPrefix>email</mat-icon>
+                    <input type="email" autocomplete="off" matInput formControlName="email" placeholder="E-mail">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-icon matPrefix>lock_outline</mat-icon>
+                    <input type="password" autocomplete="off" matInput formControlName="password" placeholder="Password">
+                   
+                    <mat-hint>Choose a password of at least six characters and maximum 16 characters</mat-hint>
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-icon matPrefix>lock_outline</mat-icon>
+                  <input type="password" autocomplete="off" matInput formControlName="confirmPassword" placeholder="Confirm Password">
+                  <mat-hint>Choose a password of at least six characters and maximum 16 characters</mat-hint>
+              </mat-form-field>
+              <div *ngIf="passwordMatchError">Password is not matching !!!</div>
+                <br>
+                <div class="btnSubmit">
+                    <button style="width:50%" [disabled]="userForm.invalid" type="submit" mat-raised-button
+                        color="primary">Submit</button>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+</div>
+
+
+
+<!-- <section class="signup">
+    <div class="signup_page">
+      <h1>SAMBHAW</h1>
+      <div class="form_wrapper">
+        <div class="form_container">
+          <div class="title_container">
+            <h2>Registration Form</h2>
+          </div>
+          <div class="row clearfix">
+            <div class="">
+              <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <div class="row clearfix">
+                  <div class="col_half">
+                    <div class="input_field">
+                      <input type="text" formControlName="firstName" placeholder="First name">
+                    </div>
+                  </div>
+                  <div class="col_half">
+                    <div class="input_field">
+                      <input type="text" formControlName="lastName" placeholder="Last name">
+                    </div>
+                  </div>
+                </div>
+                <div class="input_field">
+                  <input type="email" formControlName="email" placeholder="E-mail">
+                </div>
+                <div class="input_field">
+                  <input type="password" formControlName="password" placeholder="Password" required />
+                </div>
+                <input class="button" type="submit" value="Register" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->

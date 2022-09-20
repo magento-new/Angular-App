@@ -1,0 +1,33 @@
+table,
+td,
+tr,
+th {
+  margin: auto;
+  margin-top: 5%;
+  color: black;
+  text-align: left;
+}
+th {
+  color: #fff;
+  font-weight: normal;
+   background-color: #000;
+  border-bottom: solid 2px #d8d8d8;
+  position: sticky;
+  top: 0;
+  font-size: 16px;
+  padding: 7px;
+}
+td{
+  border-bottom: solid 2px #d8d8d8;
+}
+th,
+td,
+tr {
+  width: 8%;
+  padding: 7px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+}

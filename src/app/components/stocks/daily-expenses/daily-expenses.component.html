@@ -1,0 +1,64 @@
+<table style="background-color: white;">
+    <div>
+        <p>Expenses List </p>
+        
+    </div>
+    <span class="spacer"></span>
+    <tr>
+        <th>Item</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Location</th>
+        <th>Spent On</th>
+        <th>Status</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <mat-divider></mat-divider>
+    <tr *ngFor="let entry of expenseEntries; index as i">
+        <td scope="row">{{ entry.item }}</td>
+        <td>{{ entry.amount }}</td>
+        <td>{{ entry.category }}</td>
+        <td>{{ entry.description }}</td>
+        <td>{{ entry.spendOn  }}</td>
+        <td>{{ entry.status }}</td>
+        <td>
+            <button mat-button color="primary" (click)="approveExpenses(i)">Approve</button></td>
+          <td>  <button mat-button color="warn" (click)="deleteExpenses(entry.id )">Delete</button>
+        </td>
+    </tr>
+ 
+</table>
+<!-- <table border="1" width="1000" height="300" align="center" cellpadding="5">
+    <caption>
+        <h2>Expense</h2>
+    </caption>
+    <tr bgcolor="yellow">
+        <th color="Red">Category</th>
+        <th>price</th>
+    </tr>
+    <tr>
+        <td>Petrol</td>
+        <td>100.00</td>
+    </tr>
+    <tr>
+        <td>Rent</td>
+        <td>10000.00</td>
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td>41000.00</td>
+    </tr>
+    <tr>
+        <td>Tea</td>
+        <td>100.00</td>
+    </tr>
+    <tr>
+        <td>Transport</td>
+        <td>4000.00</td>
+    </tr>
+    <tr>
+        <td>Toatal</td>
+        <td>55200.00</td>
+    </tr>
+</table> -->

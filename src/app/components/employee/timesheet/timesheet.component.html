@@ -1,0 +1,139 @@
+<table>
+    <tr>
+        <td colspan="7">
+            <table>
+                <tr>
+                    <th>
+                        Cots per hour:
+                    </th>
+                    <td>
+                        <input type="number" id="hour_cost">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Cots per hour (Extra):
+                    </th>
+                    <td>
+                        <input type="number" id="extra_hour_cost">
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Date
+        </th>
+        <th>
+            Start
+        </th>
+        <th>
+            End
+        </th>
+        <th>
+            Hours
+        </th>
+        <th>
+            Hour Type
+        </th>
+        <th>
+            Hour Cost
+        </th>
+        <th>
+            Total
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input type="date" id="date_1">
+        </td>
+        <td>
+            <input type="time" id="start_1" onchange="re_compute()">
+        </td>
+        <td>
+            <input type="time" id="end_1" onchange="re_compute()">
+        </td>
+        <td>
+            <input type="number" id="hours_1" onchange="re_compute()">
+        </td>
+        <td>
+            <select id="type_1" onchange="re_compute()">
+                <option value="Normal" selected>Normal</option>
+                <option value="Extra">Extra</option>
+            </select>
+        </td>
+        <td id="cost_1">
+        </td>
+        <td id="total_1">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="date" id="date_2">
+        </td>
+        <td>
+            <input type="time" id="start_2" onchange="re_compute()">
+        </td>
+        <td>
+            <input type="time" id="end_2" onchange="re_compute()">
+        </td>
+        <td>
+            <input type="number" id="hours_2" onchange="re_compute()">
+        </td>
+        <td>
+            <select id="type_2" onchange="re_compute()">
+                <option value="Normal" selected>Normal</option>
+                <option value="Extra">Extra</option>
+            </select>
+        </td>
+        <td id="cost_2">
+        </td>
+        <td id="total_2">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="date" id="date_3">
+        </td>
+        <td>
+            <input type="time" id="start_3" onchange="re_compute()">
+        </td>
+        <td>
+            <input type="time" id="end_3" onchange="re_compute()">
+        </td>
+        <td>
+            <input type="number" id="hours_3" onchange="re_compute()">
+        </td>
+        <td>
+            <select id="type_3" onchange="re_compute()">
+                <option value="Normal" selected>Normal</option>
+                <option value="Extra">Extra</option>
+            </select>
+        </td>
+        <td id="cost_3">
+        </td>
+        <td id="total_3">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">
+        </td>
+        <td>
+            Total Hours
+        </td>
+        <td>
+            Total Cost
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">
+        </td>
+        <td id="total_hours">
+
+        </td>
+        <td id="total_cost">
+
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,268 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Poppins', sans-serif;
+//   background-image: url('../../../assets/bannerImg.jpg');
+//   background-image: url('https://www.chubb.com/content/dam/chubb-sites/chubb-com/us-en/businesses/risk-engineering-center/iStock-1254918372_1440x692.jpg') !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+table {
+    border-collapse: collapse;
+}
+
+.mat-calendar-body-selected {
+    background-color: #ff008c;
+    color: #fff;
+}
+@media (hover: hover) {
+    .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+        background-color: rgb(255 0 140 / 26%);
+    }
+}
+
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: rgb(255 255 255);
+  border: 1px solid #ccc;
+}
+.mat-form-field .mat-form-field-underline {
+  display: none !important;
+}
+.mat-form-field {
+  margin-bottom: 18px !important;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+    background-color: #ff008c;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #ff008c;
+}
+.mat-toolbar.mat-primary {
+    background: #000000;
+}
+.mat-raised-button.mat-primary {
+    background: linear-gradient(to bottom, #000, #000);
+    color: #fff !important;
+}
+.mat-expansion-panel-header-title {
+    color: #fff;
+}
+.mat-expansion-indicator::after {
+    color:#fff;
+}
+
+.mat-drawer .logo {
+    display: flex;
+    justify-content: space-between;
+}
+.mat-drawer .logo a {
+    display: block;
+    width: 100%;
+    background-color: #000;
+}
+.mat-drawer .logo a.user_icon {
+    float: right;
+    text-align: right;
+}
+
+.mat-list-item-content {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+}
+.mat-nav-list .nav-item {
+    margin-top: 0px !important;
+}
+.mat-list-base .mat-list-item, 
+.mat-list-base .mat-list-option {
+ height: 65px !important;
+}
+
+.form_bottom_div .mat-list-item-content {
+    align-items: center;
+    padding: 0px 0px !important;
+    justify-content: center !important;
+}
+.login-content .mat-radio-group .mat-radio-label-content {
+    font-size: 18px;
+    margin-right: 20px;
+}
+.login-content .mat-radio-group {
+    margin-bottom: 5px;
+}
+
+.login-content.admin_form .mat-form-field-wrapper {
+    padding-bottom: 0px;
+}
+.login-content.admin_form .mat-form-field {
+    margin: 0px;
+    margin-top: 20px;
+}
+.login-content.admin_form .mat-form-field-wrapper {
+    width: 100%;
+    padding: 8px 20px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+}
+.login-content.admin_form .mat-form-field-flex {
+    align-items: center;
+}
+.login-content.admin_form .mat-form-field-wrapper .mat-icon {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.login-content.admin_form .mat-raised-button {
+    margin-top: 0px;
+    color: #fff;
+    font-size: 22px;
+}
+.login-content.admin_form .mat-raised-button.mat-button-disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+}
+.login-content.admin_form .mat-form-field .mat-form-field-subscript-wrapper {
+    margin-top: 30px;
+}
+
+.login-content.admin_form .mat-form-field-infix {
+    border-top: 8px solid transparent;
+}
+
+.profile_details_outer .mat-form-field-flex {
+    width: 100%;
+    padding: 8px 20px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.profile_details_outer .mat-form-field-flex:focus {
+    border-color: #ff008c;
+}
+.profile_details_outer .mat-form-field-infix {
+    border-top: 5px solid transparent;
+}
+.profile_details_outer .mat-form-field {
+    margin-bottom: 0px !important;
+}
+.profile_details_outer .mat-radio-group {
+    padding-bottom: 15px;
+    display: block;
+}
+.profile_details_outer h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.employee_create .mat-form-field-wrapper {
+    animation: bounce 0.6s ease-out;
+    width: 100%;
+    padding: 8px 20px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+}
+.employee_create .mat-form-field-infix {
+    border-top: 5px solid transparent;
+}
+.employee_create .mat-radio-group {
+    margin-bottom: 15px;
+    display: block;
+}
+.employee_create .button.mat-raised-button {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    color: #fff !important;
+    font-size: 22px;
+    background-color: #000;
+    margin-top: 0px;
+}
+
+
+.employee_imports_outer .mat-form-field-wrapper {
+    padding: 0px;
+}
+.employee_imports_outer .mat-form-field-infix {
+    padding: 0px;
+}
+.employee_imports_outer .mat-hint {
+    margin-top: 19px;
+}
+.employee_imports_outer input[type="file"] {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.employee_imports_outer .mat-form-field-flex {
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+.AddEvent_outer .mat-form-field-infix {
+    border-top: 5px solid transparent;
+}
+.AddEvent_outer .mat-form-field-flex {
+    padding-top: 5px !important;
+}
+.AddEvent_outer .mat-form-field {
+    margin-bottom: 0px;
+}
+.AddEvent_outer .mat-form-field-flex {
+    padding: 6px 10px 8px !important;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.AddEvent_outer .mat-form-field-wrapper {
+    padding-bottom: 0px;
+}
+
+
+.add_location_btn a {
+    text-align: center;
+    height: auto !important;
+}
+.add_location_btn .mat-list-item-content {
+    display: inline-block !important;
+}
+.add_location_btn .mat-list-item-content {
+    margin-top: 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px !important;
+    height: auto !important;
+}
+
+
+.attendance_choose_date .mat-form-field {
+    margin-left: 15px;
+}

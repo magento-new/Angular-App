@@ -1,0 +1,133 @@
+<div class="container">
+    <div class="brand-section">
+        <div class="row">
+            <div class="title_section">
+               Select Invoice: 
+                <select (change)="onChange($event)">
+                    <option></option>
+                    <option *ngFor="let invoice of invoiceDetails">{{invoice.invoiceNum}}</option>
+                </select>
+            </div>
+
+        </div>
+        <!-- <div class="row">
+            <div class="col-6">
+                <h3 class="text-white"> NIMAP INFOTECH</h3>
+
+            </div>
+            <div class="col-6">
+                <div class="company-details">
+                    <p class="text-white"></p>
+                    <p class="text-white">Ambattur</p>
+                    <p class="text-white">+91 XXXXXX</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+<div *ngIf=invoice.invoiceNum>
+    <div class="body-section">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="heading">{{invoice.invoiceNum}}</h2>
+                <h2 class="heading">Bill To</h2>
+                <p class="sub-heading"> Company Name:{{invoice.from}} </p>
+                <p class="sub-heading"> Address:{{invoice.fromAddress}} </p>
+                <p class="sub-heading">Order Date: {{invoice.date}} </p>
+                <p class="sub-heading">phone: {{invoice.fromPhone}} </p>
+            </div>
+            <div class="col-6">
+                <h2 class="heading" > &nbsp; </h2>
+                <h2 class="heading">Ship To</h2>
+                <p class="sub-heading"> Company Name:{{invoice.to}} </p>
+                <p class="sub-heading"> Address:{{invoice.toAddress}} </p>
+                <p class="sub-heading">phone: {{invoice.toPhone}} </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="body-section">
+        <h3 class="heading">salary invoice</h3>
+        <br>
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th class="w-20">basic salary </th>
+                    <th class="w-20">deduction</th>
+                    <th class="w-20">total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Name</td>
+                    <td>xx</td>
+                    <td>yy </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="text-right">Sub Total</td>
+                    <td> XX</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="text-right">Tax Total %1X</td>
+                    <td> xx</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="text-right">Grand Total</td>
+                    <td> XX</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3 class="heading">Payment Status: Paid</h3>
+        <h3 class="heading">Payment Mode: bank</h3>
+    </div> -->
+
+  
+
+<div class="body-section" #content>
+    <div >
+        <div class="content">
+            <h1>Invoice</h1>
+        </div>
+       
+
+        <table>
+            <tr>
+                <th>Description</th>
+                <th>Unit Cost</th>
+                <th>Qty</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>Test Description</td>
+                <td>{{invoice.price}}</td>
+                <td>{{invoice.qty}}</td>
+                <td>{{invoice.price * invoice.qty}}</td>
+            </tr>
+            
+        </table>
+        <div class="total">
+           SubTotal: {{invoice.price * invoice.qty}}
+        </div>
+        <div class="total">
+          Discount:  {{invoice.discount}}
+        </div>
+        <div class="total">
+           GST: {{invoice.gst}}
+        </div>
+       
+        <div class="total">
+         Total:   {{invoice.price * invoice.qty-invoice.discount+invoice.gst}}
+        </div>
+    </div>
+</div>
+<div class="body-section">
+    <p>&copy; Copyright 2021 - NIMAP INFOTECH All rights reserved.
+    </p>
+</div>
+</div>
+</div>
+<div class="pdf" *ngIf=invoice.invoiceNum>
+    <button (click)="downloadPDF()">Export To PDF</button>
+    <button (click)="exportAsXLSX()">Export To excel</button>
+</div>

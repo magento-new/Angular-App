@@ -1,0 +1,108 @@
+
+table tr, 
+table td, 
+table th {
+    border: 1px solid black;
+    background-color: white;
+    margin: auto;
+    margin-top: 5%;
+    color: black;
+    text-align: left;
+    padding: 6px 8px;
+}
+table th {
+    color: #fff;
+    font-weight: normal;
+    background-color: #000;
+    border-bottom: solid 2px #d8d8d8;
+    position: sticky;
+    top: 0;
+    padding: 10px 8px;
+    font-size: 16px;
+}
+
+.manual_punching_outer {
+  width: 95%;
+  margin: auto;
+  margin-top: 50px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    border-top: 10px solid #ff008c;
+    border-radius: 5px;
+    color: #555;
+    padding: 20px;
+    background-color: #f6f6f6;
+}
+.manual_punching_outer h2{
+  text-align: center;
+    /* padding: 4%; */
+    text-transform: uppercase;
+    color: #000;
+    font-size: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+table{
+  margin: auto;
+  margin-top: -3%;
+}
+th {
+  background-color: #001f3f;
+  color: #fff;
+  padding: 0.5em 1em;
+}
+
+td {
+  border-top: 1px solid #eee;
+  padding: 0.5em 1em;
+}
+
+input {
+  cursor: pointer;
+}
+
+/* Column types */
+table th.missed-col {
+  background-color: #f00;
+}
+
+table td.missed-col {
+  background-color: #ffecec;
+  color: #f00;
+  text-align: center;
+}
+
+table td.missed-col input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.name-col {
+  text-align: left;
+}
+.button {
+  margin-top: 20px;
+}
+table {
+   border-collapse: collapse;
+   width: 100%;
+}
+.manual_punching_outer  tbody span.ng-star-inserted {
+  display: contents;
+}
+
+.attendance_choose_date {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.attendance_choose_date .attendance_lable {
+  font-size: 20px;
+  color: #000;
+}

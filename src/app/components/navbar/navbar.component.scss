@@ -1,0 +1,27 @@
+.active {
+    background-color: blue;
+     color: white;
+ }
+
+.sign-up-navbar button {
+    text-decoration: none;
+    background: #ff008c;
+    border: 2px solid #ff008c;
+    font-size: 18px;
+    padding: 0px 30px;
+    border-radius: 5px;
+    color: #fff;
+    border-radius: 50px;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    margin-left: 15px;
+}
+.sign-up-navbar button:hover {
+    background: #fff;
+    border: 2px solid #ff008c;
+    color: #ff008c;
+}
+.sign-up-navbar .mat-toolbar-row {
+    padding: 25px;
+    justify-content: space-between;
+}

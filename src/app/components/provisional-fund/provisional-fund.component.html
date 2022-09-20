@@ -1,0 +1,33 @@
+<div class="row" style="    margin-top: 68px;">
+    <h1>PF Balance Online</h1>
+</div>
+
+<!-- <h1 class="container" style="    margin-top: 10px;"> -->
+    <form class="form">
+        <!-- <label for="fname">UAN</label> -->
+        UAN<input type="text" id="fname" name="firstname" placeholder="UAN..">
+
+        <!-- <label for="lname">Mobile no</label> -->
+        Mobile no<input type="text" id="lname" name="lastname" placeholder="Mobile no..">
+
+        <div>
+            <button class="button" (click)="addchange()">Show</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </form>
+
+
+<h5 style="color:black" class="container" *ngIf="addemployee">
+    <div>Member Details With EPFO</div>
+    <p>UAN:78945622256855</p>
+    <p>DOB:12-01-2000</p>
+    <p>Aadhar :223565524124545</p>
+    <p>PAn no:5456453465465</p>
+    <p>bank account:available</p>
+    <p>Name:Asfinao MEmp No.B139999</p>
+    <p>Employee No: 123456</p>
+    <p>lost contribution :7500(oct 2021)</p>
+    <p>Total Pf Balance:400000</p>
+
+    <button class="button">view more</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="button">close</button>
+</h5>

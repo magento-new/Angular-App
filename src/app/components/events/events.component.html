@@ -1,0 +1,24 @@
+<div class="AddEvent_outer">
+
+<h2 center>AddEvent</h2>
+<form [formGroup]="eventForm">
+<mat-form-field appearance="fill" class="full-width">
+<!--  <mat-label>Choose a date</mat-label>-->
+  <input matInput formControlName="scheduleTime" [matDatepicker]="picker" placeholder="When is your event?" readonly>
+<!--  <mat-hint>MM/DD/YYYY</mat-hint>-->
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+        <mat-form-field class="full-width">
+        <input type="text" matInput formControlName="eventName" placeholder="Event Name">
+    </mat-form-field>
+    <!-- <mat-form-field class="full-width">
+        <input type="text" matInput placeholder="Department">
+    </mat-form-field> -->
+</form>
+<div>
+    <button class="button" mat-raised-button (click)="onSubmit()" color="primary">SUBMIT</button>
+    <button class="button" mat-raised-button (click)="onCancel()" color="primary">Cancel</button>
+</div>
+
+</div>

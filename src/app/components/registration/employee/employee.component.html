@@ -1,0 +1,35 @@
+<div class="login-container">
+    <div class="login-content admin_form">
+        <mat-card>
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <mat-toolbar class="login-toolbar" color="primary">Employee Registration</mat-toolbar>
+                <mat-form-field>
+                    <mat-icon matPrefix>person_outline</mat-icon>
+                    <input type="text" matInput formControlName="firstName" placeholder="First name">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-icon matPrefix>person_outline</mat-icon>
+                    <input type="text" matInput formControlName="lastName" placeholder="Last name">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-icon matPrefix>person_outline</mat-icon>
+                    <input type="text" autocomplete="off" matInput formControlName="username" placeholder="User name">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-icon matPrefix>email</mat-icon>
+                    <input type="email" matInput formControlName="email" placeholder="E-mail">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-icon matPrefix>lock_outline</mat-icon>
+                    <input type="password" matInput formControlName="password" placeholder="Password">
+                    <mat-hint>Choose a password of at least six characters and maximum 16 characters</mat-hint>
+                </mat-form-field>
+                <br>
+                <div class="btnSubmit">
+                    <button style="width:50%" [disabled]="userForm.invalid" type="submit" mat-raised-button
+                        color="primary">Submit</button>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+</div>

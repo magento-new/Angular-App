@@ -1,0 +1,37 @@
+<div class="card shadow mb-4">
+    <!-- <div class="card-header py-3">        
+        <a mat-list-item style="cursor: pointer; text-decoration: underline;" (click)="addproduct()">New Stack</a>
+    </div> -->
+    <div class="card-body">
+        <div class="table-responsive">
+            <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="background-color: white;">
+                                    <p>Stack List </p>                    
+                
+                <span class="spacer"></span>
+                <tr>
+                    <th>Name</th>                    
+                    <th>Code</th> 
+                    <th>QR Code</th>   
+                    <th>Price</th> 
+                    <th>Stack</th>
+                    <th>Location</th> 
+                    <th>Description</th> 
+                </tr>
+                <mat-divider></mat-divider>
+                
+                <tr *ngFor="let entry of product; index as i">
+                    <td>{{ entry.name }}</td>
+                    <td>{{ entry.code }}</td>
+                    <td>{{ entry.qrcode }}</td>
+                    <td>{{ entry.price }}</td>
+                    <td>{{ entry.stack }}</td>
+                    <td>{{ entry.location }}</td>
+                    <td>{{ entry.description }}</td>
+                    </tr>
+            </table>
+            
+        </div>
+    </div>
+</div>
+
+

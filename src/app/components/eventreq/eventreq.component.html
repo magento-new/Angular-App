@@ -1,0 +1,42 @@
+<div class='scheduledList' *ngIf="userType==='employee'">
+    <table style="margin: 0 auto;">
+        <tr>
+            <th>Schedule Date</th>
+            <th>Event Name</th>
+            <th>Event Status</th>
+            <th>Change Schedule</th>
+        </tr>
+        <tbody *ngFor="let ele of scheduledList; index as i">
+            <tr>
+                <td>{{ele.scheduleTime | date}}</td>
+                <td>{{ele.eventName}}</td>
+                <td>{{ele.reqStatus}}</td>
+                <td><p style='color:green; cursor: pointer;text-align: center; font-weight: bold' *ngIf="ele.scheduleTime">
+                    <span (click)="onReq(scheduledList[i],i)"><u>Request</u></span>
+                  </p></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class='scheduledList' *ngIf="userType==='admin'">
+    <table style="margin: 0 auto;">
+        <tr>
+            <th>Schedule Date</th>
+            <th>Event Name</th>
+            <th>Event Status</th>
+            <th>Request By</th>
+            <th>Change Schedule</th>
+        </tr>
+        <tbody *ngFor="let ele of scheduledListReq; index as i">
+            <tr>
+                <td>{{ele.scheduleTime | date}}</td>
+                <td>{{ele.eventName}}</td>
+                <td>{{ele.reqStatus}}</td>
+                <td>{{ele.reqBy}}</td>
+                <td><p style='color:green; cursor: pointer;text-align: center; font-weight: bold' *ngIf="ele.scheduleTime">
+                    <span (click)="onReqAdmin(scheduledListReq[i],i)"><u>Approve</u></span>
+                  </p></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

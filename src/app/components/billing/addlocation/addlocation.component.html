@@ -1,0 +1,22 @@
+<div class="container" style="margin-top: 100px;">
+    <div class="login-content">
+        <div class="form_wrapper">
+            <form [formGroup]="locationForm" action="">
+                <h2 class="login-toolbar" color="primary">Add Location</h2>
+                <div class="input_field">
+                    <input type="text" formControlName="Name" placeholder="Name">
+                </div>
+                <div class="input_field">
+                    <input type="text" matInput formControlName="Address" placeholder="Address">
+                </div>
+              
+                <div class="btnSubmit">
+                    <button [disabled]="locationForm.invalid" type="submit" (click)="save()" mat-raised-button
+                        color="primary">Save</button>
+                </div>
+               
+            </form>
+           
+        </div>
+    </div>
+</div>

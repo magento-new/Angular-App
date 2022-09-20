@@ -1,0 +1,63 @@
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5">Our warm Welcome!!<br></h1> <h2> Do you love coding ? <br>we will reach you.</h2><br>
+        <a routerLink="/guestuserProfile">Fill your details here</a>
+        <a routerLink="/workspace" style="margin-left: 20px;">job Apply</a>
+        <a routerLink="/listcompany" style="margin-left: 20px;">List of company</a>
+        <a routerLink="/guestuserDetails" style="margin-left: 20px;">User Post Details</a>
+    </div>
+</div>  
+    <div class="container">
+        <h1>Job Details</h1>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <ng-container matColumnDef="aboutcompany">
+              <th mat-header-cell *matHeaderCellDef>Aboutcompany</th>
+              <td mat-cell *matCellDef="let element"> {{element.aboutcompany}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef> Description </th>
+              <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="skills">
+                <th mat-header-cell *matHeaderCellDef> skills </th>
+                <td mat-cell *matCellDef="let element"> {{element.skills}} </td>
+              </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="experience">
+              <th mat-header-cell *matHeaderCellDef> Experience </th>
+              <td mat-cell *matCellDef="let element"> {{element.experience}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="notice">
+              <th mat-header-cell *matHeaderCellDef> Notice Period </th>
+              <td mat-cell *matCellDef="let element"> {{element.notice}} </td>
+            </ng-container>
+
+              <ng-container matColumnDef="serving">
+                <th mat-header-cell *matHeaderCellDef> serving Period </th>
+                <td mat-cell *matCellDef="let element"> {{element.serving}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="currentctc">
+                <th mat-header-cell *matHeaderCellDef> Current CTC</th>
+                <td mat-cell *matCellDef="let element"> {{element.currentctc}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="expectedctc">
+                <th mat-header-cell *matHeaderCellDef> Notice Period </th>
+                <td mat-cell *matCellDef="let element"> {{element.expectedctc}} </td>
+              </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons 
+          aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
